@@ -17,7 +17,7 @@ export default [
         component: () => import('../views/visual/basics.vue')
       },
       {
-        path: 'echarts',
+        path: 'echarts/:id',
         component: () => import('../views/visual/echarts.vue')
       }
     ]
