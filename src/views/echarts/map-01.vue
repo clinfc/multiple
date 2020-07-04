@@ -7,7 +7,10 @@
 </template>
 
 <script>
+// 在引入 bmap 扩展之前，需要在 HTML模板文件（/public/index.html） 中引入百度地图的 API。这也是不足之处
+// 引入 bmap 扩展
 import 'echarts/extension/bmap/bmap'
+
 import data from '@/assets/json/bmap.json'
 import styleJson from '@/assets/json/styleJson.json'
 
@@ -26,6 +29,7 @@ export default {
           key: 'kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
           center: [104.114129, 37.550339],
           zoom: 5,
+          // 允许缩放
           roam: true,
           mapStyle: {
             styleJson: styleJson
@@ -82,7 +86,7 @@ export default {
           },
           // 悬浮动画
           hoverAnimation: true,
-          // 波纹
+          // 波纹类型
           rippleEffect: {
             brushType: 'stroke'
           },

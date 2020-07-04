@@ -7,7 +7,7 @@
       </router-link>
       <i class="el-icon-s-fold" @click="drawer = true"></i>
     </toolbox>
-    <el-drawer :visible.sync="drawer" direction="rtl" size="260">
+    <el-drawer :visible.sync="drawer" direction="rtl" size="260" :with-header="false">
       <div class="scroll">
         <echarts-menu vertical @custom-event="drawer = false"></echarts-menu>
       </div>

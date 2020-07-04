@@ -44,7 +44,10 @@ export default {
   data() {
     return {
       data: [
-        { id: uuid(), name: '全中国销售额', path: '/echarts/map-01', img: require('@/assets/image/map-01.png') }
+        { id: uuid(), name: '全中国销售额', path: '/echarts/map-01', img: require('@/assets/image/map-01.png') },
+        { id: uuid(), name: '多系列图、dataset', path: '/echarts/mixture-01', img: require('@/assets/image/mixture-01.png') },
+        { id: uuid(), name: 'legend、dataset', path: '/echarts/legend-01', img: require('@/assets/image/legend-01.png') },
+        { id: uuid(), name: '绘图网格分割', path: '/echarts/partition-01', img: require('@/assets/image/partition-01.png') }
       ]
     }
   },
@@ -69,6 +72,10 @@ export default {
     display: block;
     margin: 10px;
     position: relative;
+    box-shadow: 0 0 10px 0 #909399;
+    &:hover {
+      box-shadow: 0 0 15px 3px #909399;
+    }
   }
 }
 </style>
