@@ -7,7 +7,6 @@
       <div :style="box">
         <div v-for="i in 6" :key="i" :style="item">{{i}}</div>
       </div>
-      <el-button class="flex-edit" type="primary" icon="el-icon-edit-outline" circle @click="drawer = true"></el-button>
       <el-drawer :visible.sync="drawer" direction="btt" size="500" :with-header="false">
         <el-row :gutter="20">
           <el-col :span="8">
@@ -54,6 +53,9 @@
           <el-col :span="8">1</el-col>
         </el-row>
       </el-drawer>
+      <toolbox home vertical>
+        <i class="el-icon-edit-outline" @click="drawer = true"></i>
+      </toolbox>
     </el-col>
   </el-row>
 </template>
@@ -162,11 +164,6 @@ export default {
 </script>
 
 <style scoped>
-.flex-edit {
-  position: fixed;
-  bottom: 100px;
-  right: 100px;
-}
 .w450 {
   width: 450px;
   margin: auto;
