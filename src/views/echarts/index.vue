@@ -1,5 +1,7 @@
 <template>
-  <echarts-menu></echarts-menu>
+  <div class="menus">
+    <echarts-menu></echarts-menu>
+  </div>
 </template>
 
 <script>
@@ -12,5 +14,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.menus {
+  width: 1300px;
+  margin: auto;
+  padding: 10px 0;
+}
 </style>

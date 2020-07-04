@@ -32,9 +32,6 @@ export default {
 
 <style lang="scss">
 .echarts-demo {
-  width: 1300px;
-  margin: auto;
-  padding: 10px 0;
   .el-drawer {
     .el-drawer__body {
       overflow: hidden;

@@ -1,5 +1,5 @@
 <template>
-  <toolbox direction="br">
+  <toolbox direction="br" :home="home" vertical>
     <a :href="href" target="_blank">
       <i class="iconfont icon-GitHub"></i>
     </a>
@@ -13,14 +13,14 @@ export default {
       type: String,
       default: ''
     },
-    name: {
-      type: String,
-      default: 'views'
+    home: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     href() {
-      return `https://github.com/clinfc/multiple/src/${name}/${this.path.replace(/^\//, '')}`
+      return `https://github.com/clinfc/multiple/blob/dev/src/views/${this.path.replace(/^\//, '')}`
     }
   }
 }
