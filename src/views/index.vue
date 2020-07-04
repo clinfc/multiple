@@ -12,7 +12,7 @@
     <div class="main">
       <template v-for="item in type">
         <div class="content" :key="item.value" v-if="tv === item.value">
-          <router-link class="card" target="_blank" v-for="ct in item.content" :key="ct.href" :to="ct.href">
+          <router-link class="card" v-for="ct in item.content" :key="ct.href" :to="ct.href">
             <template v-if="ct.src">
               <img :src="ct.src" :alt="ct.name">
             </template>
@@ -28,6 +28,7 @@
 
 <script>
 export default {
+  name: 'index',
   data() {
     return {
       tv: 'CSS3',
@@ -44,7 +45,14 @@ export default {
           value: 'visual',
           content: [
             { name: '混合实例', href: '/visual/basics', src: '' },
-            { name: 'ECharts', href: '/visual/echarts', src: '' },
+            { name: 'ECharts', href: '/echarts', src: '' },
+          ]
+        },
+        {
+          name: '测试',
+          value: 'test',
+          content: [
+            { name: 'test', href: '/test', src: '' }
           ]
         }
       ]

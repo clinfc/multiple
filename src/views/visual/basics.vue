@@ -14,6 +14,7 @@ import BasicsMap from '@/components/visual/basics/map'
 import BasicsBottom from '@/components/visual/basics/bottom'
 
 export default {
+  name: 'vb',
   components: {
     BasicsTop,
     BasicsSales,

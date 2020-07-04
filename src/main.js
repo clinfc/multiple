@@ -8,8 +8,10 @@ import axios from './plugins/axios.js'
 import './plugins/element-ui.js'
 import './plugins/vue-echarts.js'
 import './plugins/v-charts.js'
+import './plugins/component.js'
 import '@/assets/css/hljs.css'
 import '@/assets/css/main.css'
+import '@/assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios

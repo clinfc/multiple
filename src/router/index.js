@@ -5,19 +5,29 @@ import Index from '../views/index.vue'
 import Test from './test.js'
 import Visual from './visual.js'
 import CSS from './css.js'
-import Admin from './admin.js'
+import ECharts from './echarts.js'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    component: Index
+    component: Index,
+    meta: {
+      keepAlive: true
+    }
+  },
+  {
+    path: '/index',
+    component: Index,
+    meta: {
+      keepAlive: true
+    }
   },
   ...Test,
   ...Visual,
   ...CSS,
-  ...Admin,
+  ...ECharts,
   {
     path: '*',
     component: () => import('../views/404.vue')
