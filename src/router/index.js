@@ -1,33 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Index from '../views/index.vue'
-import Test from './test.js'
-import Visual from './visual.js'
-import CSS from './css.js'
-import ECharts from './echarts.js'
-
 Vue.use(VueRouter)
 
-const routes = [
+let routes = []
+const context = require.context('./', false, /\.routes\.js$/)
+
+context.keys().forEach(key => {
+  routes = routes.concat(context(key).default)
+})
+
+routes = [
   {
     path: '/',
-    component: Index,
+    component: () => import('../views/index.vue'),
     meta: {
       keepAlive: true
     }
   },
   {
     path: '/index',
-    component: Index,
+    component: () => import('../views/index.vue'),
     meta: {
       keepAlive: true
     }
   },
-  ...Test,
-  ...Visual,
-  ...CSS,
-  ...ECharts,
+  ...routes,
   {
     path: '*',
     component: () => import('../views/404.vue')
