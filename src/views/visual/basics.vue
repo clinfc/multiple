@@ -4,7 +4,7 @@
     <basics-sales></basics-sales>
     <basics-bottom></basics-bottom>
     <basics-map></basics-map>
-    <github :path="$route.path" home></github>
+    <toolbox home></toolbox>
   </div>
 </template>
 
