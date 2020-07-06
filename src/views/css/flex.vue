@@ -53,7 +53,7 @@
           <el-col :span="8">1</el-col>
         </el-row>
       </el-drawer>
-      <toolbox home vertical>
+      <toolbox home qq vertical>
         <i class="el-icon-edit-outline" @click="drawer = true"></i>
       </toolbox>
     </el-col>

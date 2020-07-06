@@ -4,7 +4,7 @@
     <basics-sales></basics-sales>
     <basics-bottom></basics-bottom>
     <basics-map></basics-map>
-    <toolbox home></toolbox>
+    <toolbox home qq vertical></toolbox>
   </div>
 </template>
 

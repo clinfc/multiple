@@ -3,7 +3,7 @@
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
-    <toolbox home vertical>
+    <toolbox home qq vertical>
       <router-link to="/echarts" title="echarts 首页">
         <i class="el-icon-s-grid"></i>
       </router-link>

@@ -8,6 +8,7 @@
         </template>
       </div>
     </div>
+    <toolbox vertical qq></toolbox>
   </div>
 </template>
 

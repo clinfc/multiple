@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import {
   Autocomplete,
+  Image,
   Input,
   InputNumber,
   Radio,
@@ -35,6 +36,7 @@ import {
 } from 'element-ui'
 
 Vue.use(Autocomplete)
+Vue.use(Image)
 Vue.use(Input)
 Vue.use(InputNumber)
 Vue.use(Radio)
