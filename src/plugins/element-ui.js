@@ -24,6 +24,7 @@ import {
   Message,
   MessageBox,
   DatePicker,
+  Tag,
   Table,
   TableColumn,
   Pagination,
@@ -55,6 +56,7 @@ Vue.use(Drawer)
 Vue.use(Menu)
 Vue.use(MenuItem)
 Vue.use(DatePicker)
+Vue.use(Tag)
 Vue.use(Table)
 Vue.use(TableColumn)
 Vue.use(Pagination)

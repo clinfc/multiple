@@ -41,25 +41,7 @@ export default {
     .scroll {
       width: 100%;
       height: 100%;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-     /*滚动条整体样式*/
-    .scroll::-webkit-scrollbar {
-      width: 2px;
-      height: 1px;
-    }
-    /*滚动条滑块*/
-    .scroll::-webkit-scrollbar-thumb {
-      border-radius: 2px;
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-      background: #535353;
-    }
-    /*滚动条轨道*/
-    .scroll::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
-      border-radius: 2px;
-      background: #ccc;
+      overflow: hidden;
     }
   }
 }
