@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dotenv": "^8.2.0",
+    "dotenv-expand": "^5.1.0",
     "echarts": "^4.8.0",
     "element-ui": "^2.4.5",
     "highlight.js": "^10.1.1",
