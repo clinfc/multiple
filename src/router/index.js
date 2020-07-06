@@ -12,7 +12,7 @@ context.keys().forEach(key => {
 
 routes = [
   {
-    path: '/',
+    path: '',
     component: () => import('../views/index.vue'),
     meta: {
       keepAlive: true

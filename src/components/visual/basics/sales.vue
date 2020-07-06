@@ -21,7 +21,7 @@
       </div>
       <div class="ranking">
         <div class="ranking-title">排行榜</div>
-        <div class="ranking-item" v-for="i in 10" :key="i">
+        <div class="ranking-item" v-for="i in 7" :key="i">
           <span class="num">{{i}}</span>
           <span class="title">标题</span>
           <span class="total">2,222,222</span>

@@ -35,10 +35,18 @@ export default {
         'box-sizing': 'border-box',
         height: '230px'
       },
-      rows: [{
-        name: '李白',
-        value: parseInt(Math.random()*250)
-      }]
+      rows: [
+        { name: 'HTML', value: parseInt(Math.random()*250) },
+        { name: 'CSS', value: parseInt(Math.random()*250) },
+        { name: 'JavaScript', value: parseInt(Math.random()*250) },
+        { name: 'TypeScript', value: parseInt(Math.random()*250) },
+        { name: 'ES6', value: parseInt(Math.random()*250) },
+        { name: 'Vue', value: parseInt(Math.random()*250) },
+        { name: 'React', value: parseInt(Math.random()*250) },
+        { name: 'Angular', value: parseInt(Math.random()*250) },
+        { name: 'sass/scss', value: parseInt(Math.random()*250) },
+        { name: 'less', value: parseInt(Math.random()*250) }
+      ]
     }
   }
 }

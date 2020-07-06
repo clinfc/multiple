@@ -1,13 +1,11 @@
 <template>
-  <div class="map">
-    <v-chart :options="option"></v-chart>
-    <toolbox direction="br"></toolbox>
-    <github :path="`${$route.path}.vue`"></github>
-  </div>
+  <e-tpe :option="option" github></e-tpe>
 </template>
 
 <script>
+import ETpe from '../../mixins/echarts-template.js'
 export default {
+  mixins: [ETpe],
   data() {
     return {
       option: {
@@ -105,11 +103,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.map {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-</style>
