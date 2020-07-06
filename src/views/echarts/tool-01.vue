@@ -70,6 +70,9 @@ export default {
             data: ['一季度', '二季度', '三季度', '四季度']
           }
         ],
+        dataZoom: {
+          type: 'slider'
+        },
         yAxis: {},
         series: [
           {
