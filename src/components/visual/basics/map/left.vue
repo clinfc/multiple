@@ -17,7 +17,7 @@ export default {
         left: 'center'
       },
       settings: {
-        key: 'kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
+        key: process.env.BMAP_AK,
         bmap: {
           center: [104.114129, 37.550339],
           zoom: 5,
