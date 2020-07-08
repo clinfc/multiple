@@ -1,7 +1,7 @@
 <template>
   <div class="map">
     <template v-if="vct && bmap">
-      <zc-bmap :options="option"></zc-bmap>
+      <zc-bmap-es :options="option"></zc-bmap-es>
     </template>
     <template v-else-if="vct">
       <v-chart :options="option"></v-chart>
@@ -40,7 +40,7 @@ export default {
   },
   components: {
     // 自己封装的 bmap
-    'zc-bmap': () => import('../bmap.vue')
+    'zc-bmap-es': () => import('../bmap-echarts.vue')
   },
   computed: {
     // 动态生成 GitHub 链接
@@ -51,9 +51,6 @@ export default {
     vct() {
       return Object.keys(this.option).length
     }
-  },
-  created() {
-
   }
 }
 </script>
