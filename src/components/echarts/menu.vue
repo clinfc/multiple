@@ -109,6 +109,12 @@ const temp = [
     name: 'tool-01',
     type: ['pie', 'line', 'bar'],
     tag: ['toolbox', 'legend', 'encode', 'dataZoom']
+  },
+  {
+    title: '树形 tree',
+    name: 'tree-01',
+    type: ['tree'],
+    tag: ['grid']
   }
 ]
 

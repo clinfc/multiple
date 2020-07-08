@@ -8,7 +8,8 @@ const name = [
   'mixture-01',
   'legend-01',
   'partition-01',
-  'tool-01'
+  'tool-01',
+  'tree-01'
 ]
 
 const children = name.map(item => {
