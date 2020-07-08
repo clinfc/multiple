@@ -1,7 +1,10 @@
 const name = [
   'index',
   'map-01',
+  'map-02',
+  'map-03',
   'bmap-01',
+  'bmap-02',
   'mixture-01',
   'legend-01',
   'partition-01',

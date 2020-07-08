@@ -63,10 +63,22 @@ function uuid() {
 
 const temp = [
   {
-    title: '地理区域数据可视化',
+    title: '地理区域可视化',
     name: 'map-01',
     type: ['map'],
     tag: ['visualMap']
+  },
+  {
+    title: '地理航线可视化',
+    name: 'map-02',
+    type: ['lines', 'effectScatter'],
+    tag: ['geo', 'effect', 'rippleEffect']
+  },
+  {
+    title: '地理航线可视化',
+    name: 'map-03',
+    type: ['lines', 'effectScatter'],
+    tag: ['geo', 'effect', 'rippleEffect', 'visualMap']
   },
   {
     title: '百度地图可视化',
