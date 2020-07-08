@@ -122,6 +122,7 @@ export default {
       width: 100px;
       height: 100px;
       padding: 10px;
+      background-color: #FFFFFF;
       box-shadow: 0 0 5px 0 #999;
       border: 1px solid #e5e5e5;
       border-radius: 5px;
