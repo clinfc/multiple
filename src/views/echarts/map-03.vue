@@ -32,6 +32,28 @@ export default {
           top: 'center',
           itemHeight: 200
         },
+        grid: {
+          left: '85%',
+          right: '5%'
+        },
+        xAxis: {
+          // x 轴的位置。top 或 bottom
+          position: 'top',
+          // 分割线
+          splitLine: {
+            show: false
+          },
+          // 轴线
+          axisLine: {
+            show: false
+          }
+        },
+        yAxis: {
+          type: 'category',
+          axisTick: {
+            show: false
+          }
+        },
         // 地理坐标系组件
         geo: {
           show: true,
@@ -42,7 +64,9 @@ export default {
           // 当前视角的缩放比例
           zoom: 1,
           // 当前视角的中心点，用经纬度表示
-          center: [104.114129, 37.550339]
+          center: [104.114129, 37.550339],
+          left: '20%',
+          right: '30%'
         },
         series: [
           {
@@ -62,11 +86,13 @@ export default {
               // 循环显示特效
               loop: true,
               //特效尾迹的长度。取从 0 到 1 的值，数值越大尾迹越长
-              trailLength: 0.2
+              trailLength: 0.2,
+              // 配置特效图形的移动动画是否是固定速度，单位像素/秒，设置为大于 0 的值后会忽略 period 配置项
+              constantSpeed: 50
             },
             lineStyle: {
               // 边的曲度，支持从 0 到 1 的值，值越大曲度越大
-              curveness: 0.25
+              curveness: -0.25
             }
           },
           {
@@ -84,7 +110,18 @@ export default {
               // 波纹的绘制方式，可选 'stroke' 和 'fill'
               brushType: 'stroke'
             },
-            symbol: 'diamond'
+            symbol: 'circle',
+            symbolSize: function(data) {
+              return data[2] / 10
+            }
+          },
+          {
+            type: 'bar',
+            data: this.barData(),
+            barWidth: '30%',
+            itemStyle: {
+              barBorderRadius: 5
+            }
           }
         ]
       }
@@ -107,6 +144,11 @@ export default {
         name: name,
         value: [ lng, lat, value ]
       }))
+    },
+    barData() {
+      return Object.entries(cityCenter)
+        .map(([name, { lng, lat, value }]) => ([ value, name ]))
+        .sort((m, n) => m[0] - n[0])
     }
   }
 }

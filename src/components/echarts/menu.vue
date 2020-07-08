@@ -71,14 +71,14 @@ const temp = [
   {
     title: '地理航线可视化',
     name: 'map-02',
-    type: ['lines', 'effectScatter'],
+    type: ['lines', 'effectScatter', 'map'],
     tag: ['geo', 'effect', 'rippleEffect']
   },
   {
     title: '地理航线可视化',
     name: 'map-03',
-    type: ['lines', 'effectScatter'],
-    tag: ['geo', 'effect', 'rippleEffect', 'visualMap']
+    type: ['lines', 'effectScatter', 'map', 'bar'],
+    tag: ['geo', 'effect', 'rippleEffect', 'visualMap', 'axis']
   },
   {
     title: '百度地图可视化',
