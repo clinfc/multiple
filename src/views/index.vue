@@ -8,7 +8,7 @@
         </template>
       </div>
     </div>
-    <toolbox vertical qq></toolbox>
+    <toolbox vertical qq gh></toolbox>
   </div>
 </template>
 
@@ -28,6 +28,12 @@ export default {
           content: [
             { name: '混合案例', route: '/visual/basics' },
             { name: 'ECharts', route: '/echarts' }
+          ]
+        },
+        {
+          title: '地图',
+          content: [
+            { name: '百度地图', route: '/bmap' },
           ]
         },
         {
