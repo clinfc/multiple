@@ -30,7 +30,7 @@ export default {
     }
   },
   created() {
-    this.$loadScriptByName(['bmap-api', 'bmap-getscript'], () => {
+    this.$loadScriptByName(['bmap-api@2', 'bmap-getscript@2'], () => {
       this.loaded = true
     })
   }
