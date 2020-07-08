@@ -29,6 +29,10 @@ export default {
             { name: '混合案例', route: '/visual/basics' },
             { name: 'ECharts', route: '/echarts' }
           ]
+        },
+        {
+          title: '持续更新中 . . . . . .',
+          content: []
         }
       ]
     }
@@ -46,10 +50,10 @@ export default {
       padding: 15px 10px;
       font-size: 24px;
       color: #333;
-      border-bottom: 1px solid #EAEAEA;
     }
     .main {
       padding: 15px 0;
+      border-top: 1px solid #EAEAEA;
       display: flex;
       flex-wrap: wrap;
       align-content: flex-start;
