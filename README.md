@@ -26,6 +26,7 @@
 :-|:-|:-|:-|:-
 `home`|显示首页|`Boolean`|`true`、`false`|`false`
 `qq`|显示 QQ 二维码|`Boolean`|`true`、`false`|`false`
+`gh`|当前项目的 GitHub 地址|`Boolean`|`true`、`false`|`false`
 `vertical`|竖向布列|`Boolean`|`true`、`false`|`false`
 `direction`|定位|`String`|`t`、`r`、`l`、`b`、`tl`、`tr`、`bl`、`br`|`r`
 
