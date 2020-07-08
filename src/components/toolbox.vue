@@ -8,6 +8,9 @@
       <i class="iconfont icon-QQ1"></i>
       <el-image :src="qqQrCode"></el-image>
     </div>
+    <a href="https://github.com/clinfc/multiple" target="_blank" title="项目地址" v-if="gh">
+      <i class="iconfont icon-GitHub"></i>
+    </a>
   </div>
 </template>
 
@@ -28,6 +31,11 @@ export default {
     direction: {
       type: String,
       default: 'r'
+    },
+    // 当前项目的 GitHub 地址
+    gh: {
+      type: Boolean,
+      default: false
     },
     // 内容是否竖向布列
     vertical: {
