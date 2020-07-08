@@ -7,9 +7,10 @@ Vue.prototype.$loadScriptByName = loadScriptByName
 /* ------------------------------------------------------ loadScriptByName --------------------------------------------------------------- */
 
 const sname = {
-  'bmap-api': '//api.map.baidu.com/api?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
-  'bmap-getscript': '//api.map.baidu.com/getscript?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
-  'bmap-mapv': '//mapv.baidu.com/build/mapv.min.js'
+  'bmap-api@2': '//api.map.baidu.com/api?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
+  'bmap-getscript@2': '//api.map.baidu.com/getscript?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
+  'bmap-mapv': '//mapv.baidu.com/build/mapv.min.js',
+  'bmap-webgl@3': 'https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
 }
 
 /**
