@@ -94,7 +94,7 @@ export default {
             orient: 'TB',
             label: {
               position: 'right',
-               rotate: 90
+              rotate: 90
             }
           },
           {
@@ -107,7 +107,7 @@ export default {
             orient: 'BT',
             label: {
               position: 'right',
-               rotate: -90
+              rotate: -90
             }
           }
         ]

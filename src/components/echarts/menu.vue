@@ -61,62 +61,7 @@ function uuid() {
   ].join('').slice(1, 32)
 }
 
-const temp = [
-  {
-    title: '地理区域可视化',
-    name: 'map-01',
-    type: ['map'],
-    tag: ['visualMap']
-  },
-  {
-    title: '地理航线可视化',
-    name: 'map-02',
-    type: ['lines', 'effectScatter', 'map'],
-    tag: ['geo', 'effect', 'rippleEffect']
-  },
-  {
-    title: '地理航线可视化',
-    name: 'map-03',
-    type: ['lines', 'effectScatter', 'map', 'bar'],
-    tag: ['geo', 'effect', 'rippleEffect', 'visualMap', 'axis']
-  },
-  {
-    title: '百度地图可视化',
-    name: 'bmap-01',
-    type: ['bmap', 'scatter', 'effectScatter'],
-    tag: ['bmap', 'coordinateSystem']
-  },
-  {
-    title: '多图示例',
-    name: 'mixture-01',
-    type: ['pie', 'bar'],
-    tag: ['dataset', 'axis', 'tooltip', 'clockwise', 'formatter', 'axisTick']
-  },
-  {
-    title: 'legend 示例',
-    name: 'legend-01',
-    type: ['pie', 'line', 'bar'],
-    tag: ['dataset', 'legend', 'encode']
-  },
-  {
-    title: '双轴 + 双坐标系',
-    name: 'partition-01',
-    type: ['line', 'bar'],
-    tag: ['grid', 'gridIndex', 'axis', 'xAxisIndex', 'yAxisIndex', 'dataset', 'seriesLayoutBy']
-  },
-  {
-    title: '多 legend + 工具箱',
-    name: 'tool-01',
-    type: ['pie', 'line', 'bar'],
-    tag: ['toolbox', 'legend', 'encode', 'dataZoom']
-  },
-  {
-    title: '树形 tree',
-    name: 'tree-01',
-    type: ['tree'],
-    tag: ['grid']
-  }
-]
+import temp from '@/assets/json/echarts-menu.json'
 
 const data = temp.map(item => {
   return {

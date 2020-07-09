@@ -4,11 +4,14 @@ const name = [
   'map-02',
   'map-03',
   'bmap-01',
+  'gauge-01',
+  'tree-01',
+  'scatter-01',
+  'scatter-02',
   'mixture-01',
   'legend-01',
   'partition-01',
-  'tool-01',
-  'tree-01'
+  'tool-01'
 ]
 
 const children = name.map(item => {
