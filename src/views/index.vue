@@ -31,12 +31,6 @@ export default {
           ]
         },
         {
-          title: '地图',
-          content: [
-            { name: '百度地图', route: '/bmap' },
-          ]
-        },
-        {
           title: '持续更新中 . . . . . .',
           content: []
         }
