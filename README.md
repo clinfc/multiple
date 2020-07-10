@@ -81,14 +81,41 @@ vm.$loadScript(data).then(function() {})
 
 ```js
 // 只加载单个 script 资源
-this.$loadScriptByName('bmap-api', function() {})
+vm.$loadScriptByName('bmap-api', function() {})
 
-this.$loadScriptByName('bmap-api').then(function() {})
+vm.$loadScriptByName('bmap-api').then(function() {})
 
 // 加载多个 script 资源
 let data = ['bmap-api', 'bmap-getscript']
 
-this.$loadScriptByName(data, function() {})
+vm.$loadScriptByName(data, function() {})
 
-this.$loadScriptByName(data).then(function() {})
+vm.$loadScriptByName(data).then(function() {})
+```
+
+
+## vm.$format
+
+* 格式化日期
+
+```js
+vm.$format(new Date(), 'y-m-d H:i:s')
+```
+
+
+## vm.$uuid
+
+* 生成唯一标识
+
+```js
+vm.$uuid()
+```
+
+
+## vm.$polishing
+
+* 用指定字符进行位数补齐
+
+```js
+vm.$polishing(2, 3)   // 003
 ```
