@@ -7,10 +7,9 @@ Vue.prototype.$loadScriptByName = loadScriptByName
 /* ------------------------------------------------------ loadScriptByName --------------------------------------------------------------- */
 
 const sname = {
-  'bmap-api@2': '//api.map.baidu.com/api?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
-  'bmap-getscript@2': '//api.map.baidu.com/getscript?v=2.0&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
-  'bmap-mapv': '//mapv.baidu.com/build/mapv.min.js',
-  'bmap-webgl@3': 'https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
+  'bmap-api@2': '//api.map.baidu.com/api?v=2.0&ak=[key]',
+  'bmap-getscript@2': '//api.map.baidu.com/getscript?v=2.0&ak=[key]',
+  'bmap-mapv': '//mapv.baidu.com/build/mapv.min.js'
 }
 
 /**
@@ -21,9 +20,9 @@ const sname = {
 function loadScriptByName(name, callback) {
   const keys = Object.keys(sname)
   if (typeof name == 'string' && keys.includes(name)) {
-    return this.$loadScript(sname[name], callback)
+    return this.$loadScript(sname[name].replace('[key]', this.$env.bmapKey), callback)
   } else if (Array.isArray(name)) {
-    name = name.filter(item => keys.includes(item)).map(item => sname[item])
+    name = name.filter(item => keys.includes(item)).map(item => sname[item].replace('[key]', this.$env.bmapKey))
     return this.$loadScript(name, callback)
   }
 }

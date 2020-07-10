@@ -18,7 +18,7 @@ export default {
         bmap: {
           zoom: 5,
           roam: true,
-          key: 'kGNFvzccNhXtVfwGDi5iIQZtACfiViEB'
+          key: this.$env.bmapKey
         },
         series: [
           {

@@ -20,7 +20,7 @@ export default {
           left: 'center'
         },
         bmap: {
-          key: 'kGNFvzccNhXtVfwGDi5iIQZtACfiViEB',
+          key: this.$env.bmapKey,
           center: [104.114129, 37.550339],
           zoom: 5,
           // 允许缩放
