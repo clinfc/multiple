@@ -24,6 +24,12 @@
     "tag": ["bmap", "coordinateSystem"]
   },
   {
+    "title": "bmap + lines",
+    "name": "bmap-02",
+    "type": ["bmap", "lines"],
+    "tag": ["bmap", "coordinateSystem", "effect"]
+  },
+  {
     "title": "树形 tree",
     "name": "tree-01",
     "type": ["tree"],

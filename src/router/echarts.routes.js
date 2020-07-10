@@ -4,6 +4,7 @@ const name = [
   'map-02',
   'map-03',
   'bmap-01',
+  'bmap-02',
   'gauge-01',
   'tree-01',
   'scatter-01',
