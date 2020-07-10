@@ -36,7 +36,7 @@ export default {
               // 仪表盘指针
               pointer: {
                 // 指针长度，可以是绝对数值，也可以是相对于半径的半分比
-                length: '45%',
+                length: '50%',
                 // 指针宽度
                 width: 6
               },
@@ -47,7 +47,7 @@ export default {
             }, {
               value: this.i,
               pointer: {
-                length: '60%',
+                length: '70%',
                 width: 6
               },
               itemStyle: {
@@ -56,13 +56,14 @@ export default {
             }, {
               value: this.s,
               pointer: {
-                length: '75%',
+                length: '85%',
                 width: 6
               },
               itemStyle: {
                 color: '#5fb878'
               }
             }],
+            silent: false,
             animation: false,
             // 仪表盘指针样式
             itemStyle: {
@@ -73,12 +74,15 @@ export default {
             },
             // 仪表盘轴线相关配置
             axisLine: {
-              show: false
+              lineStyle: {
+                color: [[1, '#5fb878']],
+                width: 10
+              }
             },
             // 刻度样式
             axisTick: {
               lineStyle: {
-                color: '#5fb878'
+                color: '#FFFFFF'
               }
             },
             // 刻度标签
@@ -95,7 +99,7 @@ export default {
             // 分隔线样式。配合 splitNumber 进行理解，分割线条数与 splitNumber 值一致，均分整个表盘
             splitLine: {
               show: true,
-              length: 15,
+              length: 20,
               lineStyle: {
                 color: '#5fb878',
                 width: 2,
