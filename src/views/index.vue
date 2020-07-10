@@ -26,7 +26,7 @@ export default {
         {
           title: '数据可视化',
           content: [
-            { name: '混合案例', route: '/visual/basics' },
+            { name: '数据报表', route: '/echarts/data-report' },
             { name: 'ECharts', route: '/echarts' }
           ]
         },
