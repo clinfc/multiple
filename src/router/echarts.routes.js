@@ -1,5 +1,6 @@
 const name = [
   'index',
+  'bar-01',
   'map-01',
   'map-02',
   'map-03',
@@ -9,11 +10,15 @@ const name = [
   'tree-01',
   'scatter-01',
   'scatter-02',
+  'pictorialBar-01',
   'mixture-01',
   'legend-01',
   'partition-01',
   'tool-01',
-  'data-report'
+  // 数据报表
+  'data-report',
+  // app 流量
+  'app-state'
 ]
 
 const children = name.map(item => {

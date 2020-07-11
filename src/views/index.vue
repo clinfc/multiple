@@ -26,8 +26,9 @@ export default {
         {
           title: '数据可视化',
           content: [
-            { name: '数据报表', route: '/echarts/data-report' },
-            { name: 'ECharts', route: '/echarts' }
+            { name: 'ECharts 基础示例', route: '/echarts' },
+            { name: 'ECharts 数据报表', route: '/echarts/data-report' },
+            { name: 'ECharts 应用流量', route: '/echarts/app-state' }
           ]
         },
         {

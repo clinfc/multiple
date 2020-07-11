@@ -54,6 +54,18 @@
     "tag": ["pointer", "startAngle", "endAngle", "axisTick", "axisLabel", "splitLine", "title", "detail"]
   },
   {
+    "title": "表格 bar",
+    "name": "bar-01",
+    "type": ["bar"],
+    "tag": ["inverse", "min", "max", "stack", "position", "barCategoryGap"]
+  },
+  {
+    "title": "象形柱图 pictorialBar",
+    "name": "pictorialBar-01",
+    "type": ["pictorialBar"],
+    "tag": ["symbol", "symbolMargin", "symbolRepeatDirection", "animationDelay"]
+  },
+  {
     "title": "多图示例",
     "name": "mixture-01",
     "type": ["pie", "bar"],
@@ -76,5 +88,11 @@
     "name": "tool-01",
     "type": ["pie", "line", "bar"],
     "tag": ["toolbox", "legend", "encode", "dataZoom"]
+  },
+  {
+    "title": "app-state",
+    "name": "app-state",
+    "type": ["pictorialBar", "line", "bar"],
+    "tag": ["dataset", "grid", "axis", "gridIndex", "min", "max", "xAxisIndex", "yAxisIndex", "symbol*", "stack", "barCategoryGap"]
   }
 ]

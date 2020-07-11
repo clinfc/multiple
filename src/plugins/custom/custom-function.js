@@ -3,6 +3,7 @@ import Vue from 'vue'
 Vue.prototype.$format = format
 Vue.prototype.$polishing = polishing
 Vue.prototype.$uuid = uuid
+Vue.prototype.$copy = copy
 
 /**
  * @param {Date|Timestamp} target 需要被格式化的时间
@@ -77,4 +78,28 @@ function uuid() {
     new Date().getTime().toString(16),
     Math.random().toString(16).slice(2),
   ].join('')
+}
+
+/**
+ * 拷贝对象/数组
+ *
+ * @param {Object|Array} target
+ */
+function copy(target) {
+  let temp
+  if (Array.isArray(target)) {
+    temp = []
+    target.forEach((v, k) => {
+      temp[k] = this.$copy(v)
+    })
+    return temp
+  } else if (target instanceof Object) {
+    temp = {}
+    for(const k in target) {
+      temp[k] = this.$copy(target[k])
+    }
+    return temp
+  } else {
+    return target
+  }
 }
