@@ -92,7 +92,7 @@
   {
     "title": "app-state",
     "name": "app-state",
-    "type": ["pictorialBar", "line", "bar"],
-    "tag": ["dataset", "grid", "axis", "gridIndex", "min", "max", "xAxisIndex", "yAxisIndex", "symbol*", "stack", "barCategoryGap"]
+    "type": ["bar","pictorialBar",  "line"],
+    "tag": ["dataset", "grid", "axis", "gridIndex", "min", "max", "xAxisIndex", "yAxisIndex", "symbol*", "stack", "barCategoryGap", "tooltip", "formatter"]
   }
 ]
