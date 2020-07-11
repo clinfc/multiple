@@ -117,8 +117,18 @@ export default {
             }
           }
         ],
+        tooltip: {
+          trigger: 'item',
+          formatter: ({seriesName, encode, data, marker, componentSubType}) => {
+            if (this.axisLabel.includes(seriesName)) {
+              let y = componentSubType == 'line' ? encode.y[0] - 1 : encode.y[0]
+              return `${marker} ${seriesName}:  ${data[y]}`
+            }
+          }
+        },
         series: [
           {
+            name: this.axisLabel[1],
             type: 'pictorialBar',
             xAxisIndex: 0,
             yAxisIndex: 0,
@@ -134,22 +144,17 @@ export default {
             symbolMargin: '-35%',
             // 指定图形元素重复时，绘制的顺序
             symbolRepeatDirection: 'end',
-            emphasis: {
-              lable: {
-                show: true,
-                position: 'top',
-                color: 'red'
-              }
-            },
             itemStyle: {
               // color: '#5FB878',
               shadowColor: '#999',
               shadowBlur: 5,
               shadowOffsetY: 2
             },
+            z: 2
           },
           // 此 bar 用于占位，否则 pictorialBar 将与 bar 重合
           {
+            name: this.axisLabel[1],
             type: 'bar',
             xAxisIndex: 0,
             yAxisIndex: 0,
@@ -160,13 +165,10 @@ export default {
             itemStyle: {
               color: 'rgba(0, 0, 0, .2)'
             },
-            emphasis: {
-              label: {
-                show: true
-              }
-            }
+            z: 1
           },
           {
+            name: this.axisLabel[2],
             type: 'bar',
             xAxisIndex: 0,
             yAxisIndex: 0,
@@ -174,13 +176,10 @@ export default {
               x: 0,
               y: 2
             },
-            emphasis: {
-              label: {
-                show: true
-              }
-            }
+            z: 1
           },
           {
+            name: this.axisLabel[3],
             type: 'line',
             xAxisIndex: 0,
             yAxisIndex: 2,
@@ -189,14 +188,10 @@ export default {
               y: 4
             },
             smooth: true,
-            emphasis: {
-              label: {
-                show: true
-              }
-            },
             itemStyle: {
               borderWidth: 5
-            }
+            },
+            z: 3
           },
           ...this.tableSeries
         ]
@@ -235,9 +230,9 @@ export default {
       }
       this.data = Array(len).fill(1).map((v, k) => {
         let down = this.random(20, 100)
-        let regi = this.random(20, down)
+        let regi = this.random(5, down)
         let perc = this.percent(regi, down, 2)
-        return [++k, down, regi, perc, parseInt(perc) / 100]
+        return [++k, down, regi, perc, parseFloat(perc) / 100]
       })
     }
   },
