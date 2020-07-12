@@ -199,16 +199,6 @@ export default {
     }
   },
   methods: {
-    // 两个数相除并得到百分数
-    percent(num1, num2, len = 0) {
-      return `${Math.round((num1 / num2) * Math.pow(10, len+2)) / 100}%`
-    },
-    // 生成一个 min <= num <= max 的数字
-    random(...arg) {
-      let min = Math.min(...arg)
-      let max = Math.max(...arg)
-      return min + Math.round(Math.random() * (max - min))
-    },
     // 日期选择和刷新数据
     change() {
       let len = 12
@@ -229,9 +219,9 @@ export default {
           break
       }
       this.data = Array(len).fill(1).map((v, k) => {
-        let down = this.random(20, 100)
-        let regi = this.random(5, down)
-        let perc = this.percent(regi, down, 2)
+        let down = this.$random(20, 100)
+        let regi = this.$random(5, down)
+        let perc = this.$percent(regi, down, 2)
         return [++k, down, regi, perc, parseFloat(perc) / 100]
       })
     }

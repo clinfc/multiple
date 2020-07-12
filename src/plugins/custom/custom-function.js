@@ -4,6 +4,8 @@ Vue.prototype.$format = format
 Vue.prototype.$polishing = polishing
 Vue.prototype.$uuid = uuid
 Vue.prototype.$copy = copy
+Vue.prototype.$random = random
+Vue.prototype.$percent = percent
 
 /**
  * @param {Date|Timestamp} target 需要被格式化的时间
@@ -102,4 +104,27 @@ function copy(target) {
   } else {
     return target
   }
+}
+
+/**
+ * 生成 min <= num <= max 的区间数
+ * @param {Number} min 区间最小值
+ * @param {Number} max 区间最大值
+ * @return {Number}
+ */
+function random(...arg) {
+  let min = Math.min(...arg)
+  let max = Math.max(...arg)
+  return min + Math.round(Math.random() * (max - min))
+}
+
+/**
+ * 得到两个数的百分数
+ * @param {Number} num1 数值1
+ * @param {Number} num2 数值2
+ * @param {Int} len 保留的小数位
+ * @return {String} 百分数
+ */
+function percent(num1, num2, len = 0) {
+  return `${Math.round((num1 / num2) * Math.pow(10, len+2)) / 100}%`
 }

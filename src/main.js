@@ -6,7 +6,6 @@ import App from './App.vue'
 
 import './plugins/element-ui.js'
 import './plugins/vue-echarts.js'
-// import './plugins/v-charts.js'
 import './plugins/component.js'
 import './plugins/custom.js'
 import '@/assets/css/main.css'
