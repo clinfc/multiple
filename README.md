@@ -99,8 +99,40 @@ vm.$loadScriptByName(data).then(function() {})
 * 格式化日期
 
 ```js
-vm.$format(new Date(), 'y-m-d H:i:s')
+vm.$format(target, template[, type[, response]])
 ```
+
+### params
+
+参数|说明|类型|可选值|默认值
+:-|:-|:-|:-|:-
+`target`|需要格式化的日期对象或时间戳|`Date`、`Timestamp`|-|-
+`template`|格式化模板|`String`|-|-
+`type`|`target`的数据类型|`Enum`|`d`、`s`、`ms`|`d`
+`response`|是否返回时间分割后的数据|`Boolean`|`true`、`false`|`false`
+
+### template
+
+占位符|说明
+:-|:-
+`y`|四位年。例如：2020
+`M`|1 ~ 12 月 的英文缩写
+`m`|1 ~ 12 月
+`w`|星期一 到 星期日 的英文缩写
+`d`|1 ~ 31 天
+`H`|24 小时
+`h`|12 小时
+`i`|60 分钟
+`s`|60 秒
+`u`|0 ~ 999 毫秒
+
+### type
+
+类型值|说明
+:-|:-
+`d`|`target`为Date对象
+`s`|`target`为时间戳
+`ms`|`target`为毫秒级的时间戳
 
 
 ## vm.$uuid
@@ -117,5 +149,45 @@ vm.$uuid()
 * 用指定字符进行位数补齐
 
 ```js
-vm.$polishing(2, 3)   // 003
+vm.$polishing(target, length[, char])
 ```
+
+### params
+
+参数|说明|类型|可选值|默认值
+:-|:-|:-|:-|:-
+`target`|需要补齐的字符串或数字|`Number`|-|-
+`length`|补齐后的字符长度|`Int`|-|-
+`char`|用于补齐的字符|`Number`、`String`|-|`0`
+
+## vm.$random
+
+* 获取 min ~ max 之间的数字，包含 min/max
+
+```js
+vm.$random(min, max)
+```
+
+### params
+
+参数|说明|类型|可选值|默认值
+:-|:-|:-|:-|:-
+`min`|区间最小值|`Number`|-|-
+`max`|区间最大值|`Number`|-|-
+
+
+## vm.$percent
+
+* 得到两个数的百分数
+
+```js
+vm.$percent(num1, num2[, len])
+```
+
+### params
+
+参数|说明|类型|可选值|默认值
+:-|:-|:-|:-|:-
+`num1`|被除数|`Number`|-|-
+`num2`|除数|`Number`|-|-
+`len`|百分数保留的小数位|`Int`||`0`
