@@ -144,9 +144,10 @@ export default {
             symbolMargin: '-35%',
             // 指定图形元素重复时，绘制的顺序
             symbolRepeatDirection: 'end',
+            // symbolClip: true,
             itemStyle: {
               // color: '#5FB878',
-              shadowColor: '#999',
+              shadowColor: '#d87a7f',
               shadowBlur: 5,
               shadowOffsetY: 2
             },
@@ -163,7 +164,7 @@ export default {
               y: 1
             },
             itemStyle: {
-              color: 'rgba(0, 0, 0, .2)'
+              color: 'rgba(0, 0, 0, 0)'
             },
             z: 1
           },

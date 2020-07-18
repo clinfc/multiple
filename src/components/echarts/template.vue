@@ -1,8 +1,10 @@
 <template>
   <div class="map">
+    <!-- 百度地图 -->
     <template v-if="vct && bmap">
       <zc-bmap-es :options="option"></zc-bmap-es>
     </template>
+    <!-- vue-charts -->
     <template v-else-if="vct">
       <v-chart :options="option"></v-chart>
     </template>
