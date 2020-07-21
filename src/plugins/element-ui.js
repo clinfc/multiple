@@ -19,6 +19,7 @@ import {
   Card,
   Collapse,
   CollapseItem,
+  Container,
   Drawer,
   Menu,
   MenuItem,
@@ -54,6 +55,7 @@ Vue.use(Col)
 Vue.use(Card)
 Vue.use(Collapse)
 Vue.use(CollapseItem)
+Vue.use(Container)
 Vue.use(Drawer)
 Vue.use(Menu)
 Vue.use(MenuItem)

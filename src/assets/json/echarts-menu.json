@@ -72,12 +72,6 @@
     "tag": ["dataset", "axis", "tooltip", "clockwise", "formatter", "axisTick"]
   },
   {
-    "title": "legend 示例",
-    "name": "legend-01",
-    "type": ["pie", "line", "bar"],
-    "tag": ["dataset", "legend", "encode"]
-  },
-  {
     "title": "双轴 + 双坐标系",
     "name": "partition-01",
     "type": ["line", "bar"],

@@ -4,7 +4,12 @@
       <div class="header">{{row.title}}</div>
       <div class="main">
         <template v-for="ct in row.content">
-          <router-link class="item" :key="ct.name" :to="ct.route">{{ct.name}}</router-link>
+          <template v-if="outside(ct.route)">
+            <a class="item" target="_blank" :key="ct.name" :href="ct.route">{{ct.name}}</a>
+          </template>
+          <template v-else>
+            <router-link class="item" :key="ct.name" :to="ct.route">{{ct.name}}</router-link>
+          </template>
         </template>
       </div>
     </div>
@@ -20,7 +25,15 @@ export default {
         {
           title: 'CSS',
           content: [
-            { name: 'Flex 调试器', route: '/css/flex' }
+            { name: 'Flex 调试器', route: '/css/flex' },
+            { name: 'Transform 示例', route: 'https://c.runoob.com/codedemo/3391' }
+          ]
+        },
+        {
+          title: 'SVG',
+          content: [
+            { name: 'SVG 基础示例', route: '/svg/basic' },
+            { name: 'SVG 混合案例', route: '/svg/demo' }
           ]
         },
         {
@@ -36,6 +49,11 @@ export default {
           content: []
         }
       ]
+    }
+  },
+  methods: {
+    outside(val) {
+      return /^https?:/.test(val)
     }
   }
 }
