@@ -17,8 +17,9 @@
 <script>
 import { html as beautify } from 'js-beautify'
 import MObserver from 'm-observer'
-
 import MdCode from '@/components/markdown-code.vue'
+
+let observer = new MObserver()
 
 export default {
   components: {
@@ -87,10 +88,13 @@ export default {
       }
       let el = document.getElementById(this.id)
       this.html = beautify(el.innerHTML, option)
-      MObserver.attributeChild(el, (list) => {
+      observer.attributeChild(el, (list) => {
         this.html = beautify(el.innerHTML, option)
       })
     })
+  },
+  beforeDestroy() {
+    observe.clear()
   }
 }
 </script>

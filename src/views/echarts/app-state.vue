@@ -32,7 +32,7 @@ export default {
         value: '',
       },
       data: [],
-      color: ['rgba(0, 0, 0, .2)', '#009688', '#5FB878', 'pink', '#FFB800','#1E9FFF',  '#FF5722'],
+      color: ["#d8d8d8", '#5FB878', "#4cb4e7", "#ffc09f", "#a3a380"],
       axisLabel: ['', '下载量', '注册量', '注册率']
     }
   },
@@ -75,6 +75,7 @@ export default {
     },
     option() {
       return {
+        color: this.color.slice(1),
         dataset: {
           source: this.data
         },
@@ -146,10 +147,8 @@ export default {
             symbolRepeatDirection: 'end',
             // symbolClip: true,
             itemStyle: {
-              // color: '#5FB878',
-              shadowColor: '#d87a7f',
-              shadowBlur: 5,
-              shadowOffsetY: 2
+              shadowColor: '#e5e5e5',
+              shadowBlur: 1
             },
             z: 2
           },
